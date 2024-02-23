@@ -103,7 +103,7 @@ PATCH /policies/homeRealmDiscoveryPolicies/{id}
 
 ```powershell
 New-AzureADPolicy 
-    -Definition @("{`"HomeRealmDiscoveryPolicy`":{`"DomainHintPolicy`": { `"IgnoreDomainHintForDomains`": [ `"testDomain.com`" ], `"RespectDomainHintForDomains`": [], `"IgnoreDomainHintForApps`": [], `"RespectDomainHintForApps`": ["app1-clientID-Guid", "app2-clientID-Guid"] } } }") 
+    -Definition @("{`"HomeRealmDiscoveryPolicy`":{`"DomainHintPolicy`": { `"IgnoreDomainHintForDomains`": [ `"testDomain.com`" ], `"RespectDomainHintForDomains`": [], `"IgnoreDomainHintForApps`": [], `"RespectDomainHintForApps`": [`"app1-clientID-Guid`", `"app2-clientID-Guid`"] } } }") 
     -DisplayName BasicBlockAccelerationPolicy 
     -Type HomeRealmDiscoveryPolicy
 ```
@@ -121,7 +121,7 @@ PATCH /policies/homeRealmDiscoveryPolicies/{id}
     "IgnoreDomainHintForDomains": [ "testDomain.com", "otherDomain.com", "anotherDomain.com"], 
     "RespectDomainHintForDomains": [], 
     "IgnoreDomainHintForApps": [], 
-    "RespectDomainHintForApps": ["app1-clientID-Guid", "app2-clientID-Guid] 
+    "RespectDomainHintForApps": [`"app1-clientID-Guid`", `"app2-clientID-Guid`"] 
 } 
 ```
 ::: zone-end
@@ -130,7 +130,7 @@ PATCH /policies/homeRealmDiscoveryPolicies/{id}
 
 ```powershell
 New-AzureADPolicy 
-    -Definition @("{`"HomeRealmDiscoveryPolicy`":{`"DomainHintPolicy`": { `"IgnoreDomainHintForDomains`": [ `"testDomain.com`", "otherDomain.com", "anotherDomain.com"], `"RespectDomainHintForDomains`": [], `"IgnoreDomainHintForApps`": [], `"RespectDomainHintForApps`": ["app1-clientID-Guid", "app2-clientID-Guid"] } } }") 
+    -Definition @("{`"HomeRealmDiscoveryPolicy`":{`"DomainHintPolicy`": { `"IgnoreDomainHintForDomains`": [ `"testDomain.com`", "otherDomain.com", "anotherDomain.com"], `"RespectDomainHintForDomains`": [], `"IgnoreDomainHintForApps`": [], `"RespectDomainHintForApps`": [`"app1-clientID-Guid`", `"app2-clientID-Guid`"] } } }") 
     -DisplayName BasicBlockAccelerationPolicy 
     -Type HomeRealmDiscoveryPolicy
 ```
@@ -148,7 +148,7 @@ PATCH /policies/homeRealmDiscoveryPolicies/{id}
     "IgnoreDomainHintForDomains": [ "*" ], 
     "RespectDomainHintForDomains": ["guestHandlingDomain.com"], 
     "IgnoreDomainHintForApps": [], 
-    "RespectDomainHintForApps": ["app1-clientID-Guid", "app2-clientID-Guid] 
+    "RespectDomainHintForApps": [`"app1-clientID-Guid`", `"app2-clientID-Guid`"] 
 } 
 ```
 ::: zone-end
@@ -158,7 +158,7 @@ PATCH /policies/homeRealmDiscoveryPolicies/{id}
 
 ```powershell
 New-AzureADPolicy 
-    -Definition @("{`"HomeRealmDiscoveryPolicy`":{`"DomainHintPolicy`": { `"IgnoreDomainHintForDomains`": [ `"*`" ], `"RespectDomainHintForDomains`": [guestHandlingDomain.com], `"IgnoreDomainHintForApps`": [], `"RespectDomainHintForApps`": ["app1-clientID-Guid", "app2-clientID-Guid"] } } }") 
+    -Definition @("{`"HomeRealmDiscoveryPolicy`":{`"DomainHintPolicy`": { `"IgnoreDomainHintForDomains`": [ `"*`" ], `"RespectDomainHintForDomains`": [guestHandlingDomain.com], `"IgnoreDomainHintForApps`": [], `"RespectDomainHintForApps`": [`"app1-clientID-Guid`", `"app2-clientID-Guid`"] } } }") 
     -DisplayName BasicBlockAccelerationPolicy 
     -Type HomeRealmDiscoveryPolicy
 ```
